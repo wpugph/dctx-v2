@@ -52,6 +52,7 @@ if ( ! function_exists( 'dctx_setup' ) ) :
 			array(
 				'primary' => esc_html__( 'Primary Menu', 'dctx' ),
 				'mobile'  => esc_html__( 'Mobile Menu', 'dctx' ),
+				'footer'  => esc_html__( 'Footer Menu', 'dctx' ),
 			)
 		);
 
