@@ -19,7 +19,7 @@ _Local SSL is required!_
 
 ### Development
 1) Once you've set up your local, run `composer install` inside `wp-content`, this will install all needed plugins by the website.
-2) If you need to add a plugin, search in [WordPress Packagist](https://wpackagist.org/) and add to `composer.json` in the `required` part, and run `composer install` again. Do not do `composer update`.
+2) If you need to add a plugin, search in [WordPress Packagist](https://wpackagist.org/) and add to `composer.json` in the `required` part, and run `composer install` again. Do not do `composer update` instead in the `wp-content` folder run `rm composer.lock` before you run `composer install`.
 
 ```
 	"require": {
@@ -45,6 +45,10 @@ NPM
 ```bash
 npm install && bower install
 ```
+
+### Branching and Dev Flow
+1) When adding your own changes\features, create a branch from `master` using either `hotfix` or `feature` like so: `git checkout -b feature\jc-feature-name`
+2) Once you're done adding your changes, create a PR and request a review.
 
 ### Gulp Tasks
 
