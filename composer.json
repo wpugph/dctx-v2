@@ -1,0 +1,24 @@
+{
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org/"
+		}
+	],
+	"require": {
+		"wpackagist-plugin/gutenberg": "7.8.1"
+	},
+	"extra": {
+		"installer-paths": {
+			"plugins/{$name}/": [
+				"type:wordpress-plugin"
+			],
+			"themes/{$name}/": [
+				"type:wordpress-theme"
+			],
+			"mu-plugin/{$name}/": [
+				"type:wordpress-muplugin"
+			]
+		}
+	}
+}

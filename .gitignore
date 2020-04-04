@@ -1,0 +1,31 @@
+*.lock
+*.log
+*.old
+*.orig
+*.sublime-project
+*.zip
+.AppleDouble
+.DS_Store
+.htaccess
+.idea/
+.LSOverride
+.sass-cache
+.vscode
+/db.php
+/mu-plugins/local.php
+/repos/
+/uploads/
+/vendor/
+assets/bower_components/bourbon/
+assets/bower_components/neat/
+compass_app_log.txt
+node_modules/
+
+# Themes we track in the repo.
+/themes/*
+!/themes/dctx-v2/
+
+# Plugins we track in the repo.
+/plugins/*
+!/plugins/index.php
+
