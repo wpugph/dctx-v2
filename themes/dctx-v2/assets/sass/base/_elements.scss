@@ -46,7 +46,7 @@ li > ol {
 } // li > ul, li > ol
 
 dt {
-	font-weight: 700;
+	font-family: $font-sans;
 } // dt
 
 dd {
@@ -62,5 +62,5 @@ table {
 } // table
 
 th {
-	font-weight: 700;
+	font-family: $font-sans;
 } // th

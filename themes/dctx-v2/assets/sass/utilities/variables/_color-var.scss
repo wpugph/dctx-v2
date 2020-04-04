@@ -34,10 +34,19 @@
 //-----------------------------------------
 // Primary Colors
 //-----------------------------------------
-$color-black:        #000;
-$color-blue:         #20739a;
-$color-light-yellow: #fff9c0;
-$color-white:        #fff;
+$color-black:           #000;
+$color-blue:            #20739a;
+$color-light-yellow:    #fff9c0;
+$color-white:           #fff;
+
+//-----------------------------------------
+// Theme Colors
+//-----------------------------------------
+$color-tango:           #ea641d;
+$color-corn:            #e8ca04;
+$color-limeaid:         #71b406;
+$color-electric-violet: #7f08ff;
+$color-gigas:           #5641a5;
 
 //-----------------------------------------
 // Grayscale Colors
@@ -103,6 +112,13 @@ $color-box-shadow: rgba($color-black, 0.5);
 
 /// Overlays.
 $color-overlay: rgba($color-black, 0.3);
+
+
+
+//-----------------------------------------
+// Linear Gradients
+//-----------------------------------------
+$gradient-purple: linear-gradient(45deg, $color-electric-violet 0%, $color-gigas 100%);
 
 
 //-----------------------------------------
@@ -291,6 +307,10 @@ $theme-colors: (
 	tundora: $color-tundora,
 	white: $color-white,
 	whitesmoke: $color-whitesmoke,
+);
+
+$theme-gradients: (
+	purple: $gradient-purple,
 );
 
 //-----------------------------------------

@@ -6,7 +6,7 @@
 // Full-width Helper
 //-----------------------------------------
 .site-main {
-	@include margin($gutter * 2 null);
+	@include margin(null null $gutter * 2 null);
 
 	width: 100%;
 
@@ -16,7 +16,7 @@
 
 	// Styles internal elements to max-width unless it's full-width.
 	> *:not(.full-width) {
-		@include margin($gutter * 2 auto);
+		// @include margin($gutter * 2 auto);
 
 		max-width: $max-width;
 
@@ -55,13 +55,19 @@
 	@include media($container-offset) {
 		@include padding(0);
 	}
+
+	.alignfull & {
+		padding: 0;
+
+		@include media($tablet-landscape) {
+			@include padding(rem(32) rem(30));
+		}
+	}
 } // .container
 
 // Adjusts padding for non-full-width content blocks with backgrounds.
 .content-block.has-background {
-
 	.container {
-
 		@include media($container-offset) {
 			padding-left: $gutter;
 			padding-right: $gutter;
@@ -80,103 +86,43 @@
 	flex-flow: row wrap;
 	width: 100%; // For IE11.
 
-	//-----------------------------------------
-	// Justification
-	//-----------------------------------------
-	&.justify-center {
-		justify-content: center; // Allows center elements without margin: 0 auto;
-	} // &.justify-center
+	&.center {
+		justify-content: center;
+	} // .display-flex.center
 
-	&.space-between {
-		justify-content: space-between; // Allows space-between elements.
-	} // &.space-between
+	&.end {
+		justify-content: flex-end;
+	} // .display-flex.end
 
-	//-----------------------------------------
-	// Alignments
-	//-----------------------------------------
-	&.flex-start {
-		align-items: flex-start;
-	} // &.flex-start
-
-	&.align-center {
-		align-items: center;
-	} // &.align-center
-
-	//-----------------------------------------
-	// Grid Elements
-	//-----------------------------------------
-
-	// 50%.
-	.half {
-		@include half;
-	} // .half
-
-	// 33%.
-	.third {
-		@include third;
-	} // .third
-
-	// 25%
-	.quarter {
-		@include quarter;
-	} // .quarter
-
-	//-----------------------------------------
-	// Sidebar Elements
-	//-----------------------------------------
-
-	// Left @ ~66% with ~50px gutter.
-	.left-two-thirds {
-		@include left-two-thirds;
-	} // .left-two-thirds
-
-	// 33%.
-	.right-third {
-		@include right-third;
-	} // .right-third
-
-	// 33%.
-	.left-third {
-		@include left-third;
-	} // .left-third
-
-	// Right @ ~66% with ~50px gutter.
-	.right-two-thirds {
-		@include right-two-thirds;
-	} // .right-two-thirds
 } // .site-wrapper, .display-flex
 
+
 //-----------------------------------------
-// Create Content/Sidebar layout
+// Site Article
+// Flex
 //-----------------------------------------
-.has-sidebar {
 
-	// Left sidebar.
-	&.page-template-template-sidebar-left {
+article {
+	&.display-flex {
+		display: inherit;
 
-		.grid-wrapper {
+		@include media($desktop) {
+			display: flex;
+			justify-content: space-between;
+		}
 
-			.sidebar {
-				@include media(null, $tablet-landscape) {
-					order: 2;
-				}
-			}
+		.header-wrap {
+			margin-left: auto;
+			margin-right: auto;
 
-			.site-main {
-				@include media(null, $tablet-landscape) {
-					order: 1;
-				}
+			@include media($desktop) {
+				margin-left: initial;
+				margin-right: initial;
 			}
 		}
+
+		.entry-header {
+			max-width: 100%;
+		}
 	}
-
-	.grid-wrapper {
-		@include margin($gutter * 2 auto);
-
-		max-width: $max-width;
-	} // .grid-wrapper
-
-	.site-main {
-		@include margin(0 null);
-	} // .site-main
-} // .has-sidebar
+}

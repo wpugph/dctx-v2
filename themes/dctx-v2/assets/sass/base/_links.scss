@@ -2,9 +2,11 @@
 // Global Link Styles
 //--------------------------------------------------------------
 
-a:not(.button):not(.wp-block-button__link) {
+// a:not(.button):not(.wp-block-button__link) {
+a {
 	color: $color-link;
 	opacity: 1;
+	text-decoration: none;
 	transition: $transition-opacity;
 
 	&:visited {
@@ -14,7 +16,7 @@ a:not(.button):not(.wp-block-button__link) {
 	&:hover,
 	&:active {
 		color: $color-link-hover;
-		opacity: 0.6;
+		text-decoration: underline;
 	} // &:hover, &:active
 
 	&:focus {

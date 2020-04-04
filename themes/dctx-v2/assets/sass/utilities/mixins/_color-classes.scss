@@ -26,13 +26,11 @@
 ///  }
 
 @mixin colors($colors: $theme-colors) {
-
 	@if type-of($colors) != 'map' {
 		@error 'Sorry, $colors is not a Sass map!';
 	}
 
 	@each $name, $color in $colors {
-
 		// Create background color classes.
 		.background-#{$name},
 		.has-#{$name}-background-color {
@@ -50,10 +48,22 @@
 			color: $color;
 		}
 
-
 		// Create fill classes.
 		.fill-#{$name} {
 			fill: $color;
+		}
+	}
+}
+
+@mixin gradients($gradients: $theme-gradients) {
+	@if type-of($gradients) != 'map' {
+		@error 'Sorry, $gradients is not a Sass map!';
+	}
+
+	@each $name, $gradient in $gradients {
+		// Create background gradient classes.
+		.background-gradient-#{$name} {
+			background: $gradient;
 		}
 	}
 }

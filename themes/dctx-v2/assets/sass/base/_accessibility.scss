@@ -23,12 +23,12 @@
 		clip: auto;
 		color: $color-text-screen-reader;
 		display: block;
+		font-family: $font-sans;
 		font-size: rem(14);
-		font-weight: 700;
 		left: rem(5);
 		line-height: normal;
 		text-decoration: none;
 		top: rem(5);
-		z-index: 100000; // Above WP toolbar
+		z-index: $z-index999999; // Above WP toolbar
 	} // &:hover, &:active, &:focus
 } // .screen-reader-text

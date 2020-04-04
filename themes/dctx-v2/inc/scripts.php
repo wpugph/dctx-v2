@@ -23,17 +23,17 @@ function dctx_font_url() {
 	 * into your own language.
 	 */
 	$roboto    = esc_html_x( 'on', 'Roboto font: on or off', 'dctx' );
-	$open_sans = esc_html_x( 'on', 'Open Sans font: on or off', 'dctx' );
+	$work_sans = esc_html_x( 'on', 'Work Sans font: on or off', 'dctx' );
 
-	if ( 'off' !== $roboto || 'off' !== $open_sans ) {
+	if ( 'off' !== $roboto || 'off' !== $work_sans ) {
 		$font_families = array();
 
 		if ( 'off' !== $roboto ) {
 			$font_families[] = 'Roboto:400,700';
 		}
 
-		if ( 'off' !== $open_sans ) {
-			$font_families[] = 'Open Sans:400,300,700';
+		if ( 'off' !== $work_sans ) {
+			$font_families[] = 'Work Sans';
 		}
 
 		$query_args = array(

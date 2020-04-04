@@ -5,6 +5,14 @@
 //-----------------------------------------
 // Scaffolding defaults
 //-----------------------------------------
+.section-scaffolding {
+	margin: 2rem auto;
+}
+
+.scaffolding-button {
+	border: none;
+}
+
 .scaffolding-document {
 	margin-bottom: $gutter * 2;
 
@@ -16,7 +24,7 @@
 
 		// The title.
 		h3 {
-			@include margin(0);
+			@include margin(0 rem(30) 0 0);
 			@include padding(0);
 		} // h2
 
@@ -37,16 +45,6 @@
 			@include margin($gutter 0);
 		} // h4, p
 
-		// The <pre> container.
-		pre {
-			@include margin(0 0 $gutter);
-			@include padding($gutter);
-
-			background-color: $color-background-pre;
-			border: 1px solid $color-border-pre;
-			color: $color-text-pre;
-		} // pre
-
 		// The <code> container.
 		code {
 			@include padding(rem(5));
@@ -59,13 +57,11 @@
 	// Always display the global scaffolding.
 	&.scaffolding-colors,
 	&.scaffolding-fonts {
-
 		.scaffolding-document-content {
 			display: block;
 		} // .scaffolding-document-content
 	} // &.scaffolding-colors, &.scaffolding-fonts
 } // .scaffolding-document
-
 
 //-----------------------------------------
 // Color swatch defaults
@@ -75,12 +71,12 @@
 
 	// Each swatch.
 	.swatch {
-		border: 1px solid $color-border-scaffolding-swatch;
+		display: flex;
+		flex-direction: column;
 		height: rem(150);
+		justify-content: center;
 		margin-bottom: $gutter;
-		margin-right: 1.5%;
 		overflow: hidden;
-		position: relative;
 		text-align: center;
 
 		// The swatch <header>
@@ -96,12 +92,11 @@
 		// The swatch <footer>
 		& footer {
 			@include padding(rem(10));
-			@include position(absolute, null null 0 null);
 
+			align-self: center;
 			background-color: $color-background-scaffolding;
-			border-top: 1px solid $color-scaffolding;
 			font-size: rem(12);
-			width: 100%;
+			width: 80%;
 		} // footer
 	} // .swatch
 } // .swatch-container

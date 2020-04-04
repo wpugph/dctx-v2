@@ -4,6 +4,7 @@
 
 // Create our background, color, and fill presentational classes.
 @include colors($theme-colors);
+@include gradients($theme-gradients);
 
 //-----------------------------------------
 // Elements

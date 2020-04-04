@@ -25,44 +25,58 @@ textarea {
 @for $i from 1 through 6 {
 	h#{$i},
 	.h#{$i} {
-		font-weight: bold;
-		margin-top: 0;
+		@include margin(0 null $gutter null);
+
+		font-family: $font-sans;
+		font-weight: 600;
+		line-height: 1.2;
+		text-transform: uppercase;
+
+		&.font-bold,
+		& strong,
+		& b {
+			font-family: $font-sans;
+			font-weight: 800;
+		}
 	} // h#{$i}, .h#{$i}
 } // end @for
 
 h1,
-.h1,
-.has-large-font-size {
-	font-size: rem(32); // HTML5 Default.
+.h1 {
+	font-size: em(48); // HTML5 Default.
+
+	&.title {
+		font-size: em(61); // HTML5 Default.
+	}
 } // h1, .h1
 
 h2,
 .h2 {
-	font-size: rem(24); // HTML5 Default.
+	font-size: em(39); // HTML5 Default.
 } // h2, .h2
 
 h3,
 .h3 {
-	font-size: rem(18.72); // HTML5 Default.
+	font-size: em(31); // HTML5 Default.
 } // h3, .h3
 
 h4,
 .h4 {
-	font-size: rem(18); // HTML5 Default.
+	font-size: em(25); // HTML5 Default.
 } // h4, .h4
 
 h5,
 .h5 {
-	@extend h4; // Typically h5 isn't used, default to h4.
-
-	font-style: italic;
-}  // h5, .h5
+	font-family: $font-sans;
+	font-size: em(20); // HTML5 Default.
+	font-weight: 600;
+} // h5, .h5
 
 h6,
 .h6 {
-	@extend h4; // Typically h6 isn't used, default to h4.
-
-	font-style: italic;
+	font-family: $font-sans;
+	font-size: em(18); // HTML5 Default.
+	font-weight: 600;
 } // h6, .h6
 
 //--------------------------------------------------------------
@@ -71,6 +85,10 @@ h6,
 
 p {
 	@include margin(0 0 $space);
+
+	font-family: $font-sans;
+	font-size: rem(18);
+	line-height: lh(26, 18);
 
 	// Remove margin from last paragraph in element.
 	&:last-child {
@@ -88,7 +106,8 @@ p {
 
 b,
 strong {
-	font-weight: 700;
+	font-family: $font-sans;
+	font-weight: 800;
 } // b, strong
 
 dfn,
@@ -109,11 +128,11 @@ q {
 	&::before,
 	&::after {
 		content: '';
-	}  // &::before, &::after
+	} // &::before, &::after
 } // blockquote, q
 
 blockquote {
-	border-left: 4px solid $color-cod-gray;
+	border-left: rem(4) solid $color-alto;
 	font-style: italic;
 	margin-left: 0;
 	padding-left: rem(20);
@@ -122,51 +141,11 @@ blockquote {
 		margin-bottom: 0;
 		padding-bottom: 0;
 	}
-}
+} // blockquote
 
 address {
 	@include margin(0 0 $space);
 } // address
-
-pre {
-	@include margin(0 0 $space rem(-24));
-	@include padding($space);
-
-	background-color: $color-background-pre;
-	border: 1px solid $color-border-pre;
-	color: $color-text-pre;
-	font-family: $font-pre;
-	font-size: rem(13);
-	line-height: $line-height-pre;
-	overflow: auto;
-	white-space: pre;
-	word-break: normal;
-	word-wrap: normal;
-} // pre
-
-code,
-kbd,
-tt,
-var {
-	font-family: $font-code;
-	font-size: rem(15);
-} // code, kbd, tt, var
-
-kbd {
-	background-color: $color-whitesmoke;
-	border: 1px solid $color-silver;
-	border-radius: rem(4);
-	box-shadow: 0 rem(1) 0 rgba($color-black, 0.2), 0 0 0 rem(2) $color-white inset;
-	display: inline-block;
-	margin: 0 rem(3);
-	padding: rem(2) rem(8);
-}
-
-code {
-	background-color: $color-gallery;
-	color: $color-tundora;
-	padding: rem(2) rem(4);
-}
 
 abbr {
 	border-bottom: 1px dotted $color-border-abbr;
@@ -186,6 +165,33 @@ sub {
 	position: relative;
 	vertical-align: baseline;
 } // sup, sub
+
+code,
+kbd,
+pre,
+tt,
+var {
+	border: 1px solid $color-border-pre;
+	border-radius: rem(4);
+	color: $color-text-pre;
+	font-family: $font-code;
+	font-size: rem(15);
+} // code, kbd, tt, var
+
+pre {
+	@include margin(0 0 $gutter);
+	@include padding($gutter);
+
+	background-color: $color-background-pre;
+} // pre
+
+kbd {
+	@include margin(0 rem(3));
+	@include padding(rem(2) rem(8) 0);
+
+	box-shadow: 0 rem(1) 0 rgba($color-black, 0.2), 0 0 0 rem(2) $color-white inset;
+	display: inline-block;
+}
 
 sup {
 	bottom: 1ex;
@@ -213,3 +219,4 @@ big {
 	word-break: keep-all;
 	word-wrap: break-word;
 } // .entry-title, .entry-content, .comments-title, .comment-content, .widget-title, .widget
+

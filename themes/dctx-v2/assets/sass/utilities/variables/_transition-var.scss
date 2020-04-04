@@ -13,6 +13,9 @@ $ease: ease-in-out;
 
 /// Transition types.
 $bg-color: background-color $speed;
+$bg-image: background-image $speed;
+$bg-position: background-position $speed;
+$bg-size: background-size $speed;
 $border: border $speed;
 $color: color $speed;
 $height: height $speed;
@@ -50,3 +53,12 @@ $transition-visibility: $visibility $ease;
 
 /// Transform Background Color
 $transition-bg-color: $bg-color $ease;
+
+/// Transform Background Image
+$transition-bg-image: $bg-image $ease;
+
+/// Transform Background Position
+$transition-bg-position: $bg-position $ease;
+
+/// Transform Background Size
+$transition-bg-size: $bg-size $ease;
