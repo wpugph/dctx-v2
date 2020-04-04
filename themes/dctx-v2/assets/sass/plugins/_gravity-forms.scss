@@ -141,7 +141,7 @@ $gf-input-padding: rem(6);
 		&::before {
 			border-color: $color-silver transparent transparent;
 			border-style: solid;
-			border-width: 12px (12px / 2) 0;
+			border-width: rem(12) (rem(12) / 2) 0;
 			content: '';
 			height: 0;
 			width: 0;
@@ -177,7 +177,7 @@ $gf-input-padding: rem(6);
 				border-color: transparent transparent $color-silver;
 				border-width: 0 1rem 1rem;
 				border-style: solid;
-				border-width: 0 (12px / 2) 12px;
+				border-width: 0 (rem(12) / 2) rem(12);
 				content: '';
 				height: 0;
 				width: 0;

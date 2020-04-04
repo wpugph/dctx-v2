@@ -23,3 +23,49 @@ a {
 		color: $color-link-focus;
 	} //  &:focus
 } // a
+
+//--------------------------------------------------------------
+// Main Navigation — Desktop.
+//--------------------------------------------------------------
+
+.main-navigation {
+
+	a {
+		font-size: rem(16);
+		font-weight: 600;
+		line-height: rem(20);
+
+	} // a
+
+	.button {
+		background-color: transparent;
+		padding: 0;
+
+		a {
+			@include padding(rem(5));
+
+			background-color: transparent;
+			border: rem(1) solid $color-limeaid;
+			border-radius: rem(4);
+			color: $color-limeaid;
+			font-size: rem(16);
+			font-weight: 600;
+			line-height: rem(20);
+			text-align: center;
+			text-decoration: none;
+
+			&:visited {
+				color: $color-limeaid;
+			} // &:visited
+
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: $color-limeaid;
+				color: $color-white;
+			} // &:hover, &:focus, &:active
+		} // a
+
+	} // .button
+
+} // .main-navigation

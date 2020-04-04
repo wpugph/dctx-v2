@@ -48,7 +48,7 @@
 				@include size(rem(30));
 
 				background: $color-background-modal-close;
-				border: 3px solid $color-modal-close;
+				border: rem(3) solid $color-modal-close;
 				border-radius: 50%;
 				color: $color-modal-close;
 				cursor: pointer;

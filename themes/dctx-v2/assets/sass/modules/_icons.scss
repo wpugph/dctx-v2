@@ -41,7 +41,7 @@
 //--------------------------------------------------------------
 $social-sites: facebook instagram linkedin twitter;
 
-.menu {
+.menu:not(#primary-menu) {
 
 	a {
 		// Set the background image for each social network.

@@ -3,8 +3,19 @@
 //--------------------------------------------------------------
 
 .site-header {
+	@include padding(rem(20) null);
+
+	background-color: $color-white;
+	box-shadow: 0 0 rem(4) 0 rgba($color-black, 0.25);
 	flex: 0 0 100%;
 	width: 100%;
+
+	// Header Wrapper.
+	.header-wrapper {
+		align-items: center;
+		display: flex;
+		flex-flow: row wrap;
+	} // .header-wrapper
 
 	// Site logo.
 	.site-branding {
@@ -17,7 +28,9 @@
 		}
 
 		@include media($tablet-landscape) {
-			width: 45%;
+			flex: 1 0 auto;
+			max-width: rem(300);
+			width: auto;
 		}
 
 		// Don't let the logo get out of control.
@@ -60,6 +73,7 @@
 	//-----------------------------------------
 	.site-header-action {
 		flex: 0 0 auto;
+		max-width: rem(170);
 		width: 100%;
 
 		@include media($tablet-landscape) {
@@ -68,7 +82,8 @@
 		}
 
 		@include media($desktop) {
-			width: 25%;
+			flex: 1 0 auto;
+			width: auto;
 		}
 	} // .site-header-action
 
@@ -85,9 +100,26 @@
 		// Span the button the full width.
 		.button-link,
 		.cta-button {
-			color: $color-cta-link;
+			background-color: transparent;
+			border: rem(1) solid $color-limeaid;
+			border-radius: rem(4);
+			color: $color-limeaid;
+			font-size: rem(16);
+			font-weight: 600;
+			line-height: rem(20);
 			text-align: center;
 			text-decoration: none;
+
+			&:visited {
+				color: $color-limeaid;
+			} // &:visited
+
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: $color-limeaid;
+				color: $color-white;
+			} // &:hover, &:focus, &:active
 		} // .button-link, .cta-button
 	} // .site-header-action
 
@@ -105,7 +137,7 @@
 				@include padding($space / 2);
 
 				background-color: $color-white;
-				border: 1px solid $color-gallery;
+				border: rem(1) solid $color-gallery;
 				display: none;
 			} // .search-form
 
@@ -125,7 +157,7 @@
 	// Main Navigation Container.
 	//-----------------------------------------
 	.main-navigation {
-		flex: 0 0 auto;
-		width: 100%;
+		flex: 1 0 auto;
+		width: auto;
 	} // .main-navigation
 } // .site-header

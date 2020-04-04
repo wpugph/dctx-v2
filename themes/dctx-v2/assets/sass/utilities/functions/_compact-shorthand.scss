@@ -10,7 +10,7 @@
 ///   List of directional values.
 ///
 /// @example scss
-///   $values: _compact-shorthand(10px 20px 10px 20px);
+///   $values: _compact-shorthand(rem(10) rem(20) rem(10) rem(20));
 ///
 ///   // Output
 ///   $values: 10px 20px;

@@ -16,8 +16,11 @@
 			@include margin(null auto);
 			@include padding(null $gutter);
 
-			display: block;
+			align-items: center;
+			display: flex;
+			justify-content: flex-end;
 			max-width: $max-width;
+			width: auto;
 		}
 
 		@include media($container-offset) {
@@ -25,9 +28,14 @@
 		}
 
 		li {
-			@include margin(0 rem(10) 0 0);
+			@include margin(0 rem(13) 0 0);
 
 			display: inline-block;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+
 		} // li
 	} // ul
 
@@ -44,9 +52,10 @@
 
 	// Sub-menu
 	ul {
-		@include position(absolute, $space null null -999em);
+		@include position(absolute, rem(20) null null -999em);
 
-		box-shadow: 0 rem(3) rem(3) $color-box-shadow;
+		border: rem(1) solid $color-alto;
+		border-radius: rem(4);
 		z-index: 99999;
 
 		// Sub-sub menu
@@ -69,7 +78,8 @@
 		a {
 			@include size(100%, auto);
 
-			min-width: rem(200);
+			min-width: rem(120);
+			width: auto;
 		} // a
 	} // ul
 

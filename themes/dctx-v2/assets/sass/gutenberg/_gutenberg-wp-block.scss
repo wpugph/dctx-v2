@@ -39,7 +39,7 @@
 
 	.block-expired-text {
 		background-color: rgba($color-white, 0.8);
-		border: 1px solid $color-cod-gray;
+		border: rem(1) solid $color-cod-gray;
 		color: $color-cod-gray;
 		display: block;
 		padding: $gutter;

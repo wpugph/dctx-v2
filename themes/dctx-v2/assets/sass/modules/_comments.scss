@@ -8,7 +8,7 @@
 .comments-area {
 	@include margin(rem(100) 0 rem(151));
 
-	border-top: 1px solid $color-border-comment;
+	border-top: rem(1) solid $color-border-comment;
 
 	@include media($desktop) {
 		margin-left: auto;
@@ -64,7 +64,7 @@
 		// Focus + active state.
 		&:focus,
 		&:active {
-			border: 1px solid $color-border-comment-focus;
+			border: rem(1) solid $color-border-comment-focus;
 		} // &:focus, &:active
 
 		@include media($tablet-portrait) {
@@ -80,7 +80,7 @@
 		// Focus + active state.
 		&:focus,
 		&:active {
-			border: 1px solid $color-border-comment-focus;
+			border:rem(1) solid $color-border-comment-focus;
 		} // &:focus, &:active
 	} // textara
 

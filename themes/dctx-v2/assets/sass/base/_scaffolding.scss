@@ -18,7 +18,7 @@
 
 	// The section <header>
 	&-header {
-		border-bottom: 1px solid $color-border-scaffolding;
+		border-bottom: rem(1) solid $color-border-scaffolding;
 		margin-bottom: $gutter;
 		padding-bottom: $gutter;
 
@@ -85,7 +85,7 @@
 			color: $color-scaffolding;
 			display: flex;
 			flex-direction: column;
-			height: calc(100% - 39px);
+			height: calc(100% - rem(39));
 			justify-content: center;
 		} // header
 

@@ -47,6 +47,7 @@ $color-corn:            #e8ca04;
 $color-limeaid:         #71b406;
 $color-electric-violet: #7f08ff;
 $color-gigas:           #5641a5;
+$color-robins-egg:      #00bcd4;
 
 //-----------------------------------------
 // Grayscale Colors
@@ -137,16 +138,16 @@ $color-text-screen-reader: $color-blue;
 //-----------------------------------------
 
 /// Links.
-$color-link: $color-blue;
+$color-link: $color-black;
 
 /// Visited Links.
-$color-link-visited: $color-blue;
+$color-link-visited: $color-black;
 
 /// Hovered Links.
-$color-link-hover: $color-blue;
+$color-link-hover: $color-robins-egg;
 
 /// Focus LInks.
-$color-link-focus: $color-blue;
+$color-link-focus: $color-robins-egg;
 
 
 //-----------------------------------------
@@ -258,13 +259,13 @@ $color-border-block: $color-silver;
 $color-mobile-menu-link: $color-link;
 
 /// Hamburger background.
-$color-background-hamburger: $color-cod-gray;
+$color-background-hamburger: $color-limeaid;
 
 /// Off-canvas Container Background.
-$color-background-off-canvas: $color-whitesmoke;
+$color-background-off-canvas: $color-white;
 
 /// Off-canvas Screen Background.
-$color-background-off-canvas-screen: $color-black;
+$color-background-off-canvas-screen: $color-white;
 
 /// Submenu Background.
 $color-background-submenu: $color-white;

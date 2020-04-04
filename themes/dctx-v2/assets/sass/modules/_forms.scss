@@ -64,7 +64,7 @@ textarea {
 
 	appearance: none;
 	background-color: $color-white;
-	border: 1px solid $color-border-input;
+	border: rem(1) solid $color-border-input;
 	border-radius: 0;
 	color: $color-text-input;
 	line-height: 1.5;
@@ -109,7 +109,7 @@ select {
 	background-image: url('assets/images/svg-icons/caret-down.svg');
 	background-position: calc(100% - #{rem(20)}) 50%;
 	background-repeat: no-repeat;
-	background-size: 10px 16px;
+	background-size: rem(10) rem(16);
 
 	// for IE11;
 	&::-ms-expand {
@@ -125,7 +125,7 @@ input[type='radio'] {
 	@include size(rem(20));
 
 	appearance: none;
-	border: 1px solid $color-border-input;
+	border: rem(1) solid $color-border-input;
 	border-radius: rem(3);
 	margin: 0 rem(3) 0 0;
 	outline: 0;
@@ -154,7 +154,7 @@ input[type='checkbox']:checked::after {
 
 	// Add a white border on the bottom and left, creating that 'L'.
 	border: solid $color-focus-text-input;
-	border-width: 0 3px 3px 0;
+	border-width: 0 rem(3) rem(3) 0;
 
 	// Add another block-level blank space.
 	content: '';

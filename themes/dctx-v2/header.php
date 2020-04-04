@@ -26,7 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'dctx' ); ?></a>
 
 	<header class="site-header background-gallery">
-		<div class="display-flex container">
+		<div class="container header-wrapper">
 
 			<div class="site-branding">
 
@@ -46,26 +46,27 @@
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 
-			<?php dctx_display_header_button(); ?>
-
 			<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'mobile' ) ) : ?>
 				<button type="button" class="off-canvas-open" aria-expanded="false" aria-label="<?php esc_html_e( 'Open Menu', 'dctx' ); ?>">
 					<span class="hamburger"></span>
 				</button>
 			<?php endif; ?>
+
+			<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'dctx' ); ?>">
+				<?php
+				wp_nav_menu(
+					array(
+						'fallback_cb'    => false,
+						'theme_location' => 'primary',
+						'menu_id'        => 'primary-menu',
+						'menu_class'     => 'menu dropdown container',
+						'container'      => false,
+					)
+				);
+				?>
+			</nav><!-- #site-navigation-->
+
+			<?php dctx_display_header_button(); ?>
 		</div><!-- .container -->
 
-		<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'dctx' ); ?>">
-			<?php
-			wp_nav_menu(
-				array(
-					'fallback_cb'    => false,
-					'theme_location' => 'primary',
-					'menu_id'        => 'primary-menu',
-					'menu_class'     => 'menu dropdown container',
-					'container'      => false,
-				)
-			);
-			?>
-		</nav><!-- #site-navigation-->
 	</header><!-- .site-header-->
