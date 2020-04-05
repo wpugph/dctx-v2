@@ -48,7 +48,7 @@
 			overflow: hidden;
 			width: auto;
 
-			@include media($tablet-landscape) {
+			@include media($tablet-portrait) {
 				min-width: rem(200);
 			}
 

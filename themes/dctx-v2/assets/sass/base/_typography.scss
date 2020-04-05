@@ -30,7 +30,6 @@ textarea {
 		font-family: $font-sans;
 		font-weight: 600;
 		line-height: 1.2;
-		text-transform: uppercase;
 
 		&.font-bold,
 		& strong,
@@ -86,6 +85,7 @@ h6,
 p {
 	@include margin(0 0 $space);
 
+	color: $color-text-main;
 	font-family: $font-sans;
 	font-size: rem(18);
 	line-height: lh(26, 18);
