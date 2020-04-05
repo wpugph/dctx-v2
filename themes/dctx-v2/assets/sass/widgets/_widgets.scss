@@ -13,6 +13,9 @@
 	// Extend the h3 style for the widget titles.
 	.widget-title {
 		@extend .h3 !optional;
+
+		text-align: center;
+		text-transform: none;
 	} // .widget-title
 } // .widget
 
@@ -20,3 +23,41 @@
 .widget_search .search-submit {
 	display: none;
 } // .widget_search .search-submit
+
+// Galery widget.
+.widget_media_gallery {
+
+	.gallery {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		max-width: 100%;
+
+		@include media($tablet-portrait) {
+			flex-direction: row;
+		}
+
+		.gallery-item {
+			@include margin(rem(15) 0);
+			@include padding(rem(10) rem(15));
+
+			height: auto;
+			min-width: 80%;
+			overflow: hidden;
+			width: auto;
+
+			@include media($tablet-landscape) {
+				min-width: rem(200);
+			}
+
+			img {
+				height: auto;
+				object-fit: cover;
+				object-position: center;
+				width: 100%;
+			} // img
+		} // .gallery-item
+	} // .gallery
+} // .widget-media-gallery

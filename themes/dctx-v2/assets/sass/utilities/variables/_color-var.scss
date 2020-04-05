@@ -48,6 +48,7 @@ $color-limeaid:         #71b406;
 $color-electric-violet: #7f08ff;
 $color-gigas:           #5641a5;
 $color-robins-egg:      #00bcd4;
+$color-desert-storm:    #f1f2f0;
 
 //-----------------------------------------
 // Grayscale Colors
@@ -257,18 +258,19 @@ $color-border-block: $color-silver;
 
 /// Mobile menu link.
 $color-mobile-menu-link: $color-link;
+$color-mobile-menu-link-hover: $color-robins-egg;
 
 /// Hamburger background.
-$color-background-hamburger: $color-limeaid;
+$color-background-hamburger: $color-black;
 
 /// Off-canvas Container Background.
-$color-background-off-canvas: $color-white;
+$color-background-off-canvas: $color-desert-storm;
 
 /// Off-canvas Screen Background.
-$color-background-off-canvas-screen: $color-white;
+$color-background-off-canvas-screen: $color-desert-storm;
 
 /// Submenu Background.
-$color-background-submenu: $color-white;
+$color-background-submenu: $color-desert-storm;
 
 
 //-----------------------------------------

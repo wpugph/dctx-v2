@@ -27,5 +27,6 @@ node_modules/
 
 # Plugins we track in the repo.
 /plugins/*
+/mu-plugins/*
 !/plugins/index.php
 

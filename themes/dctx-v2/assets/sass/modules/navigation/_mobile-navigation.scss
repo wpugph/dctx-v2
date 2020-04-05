@@ -20,19 +20,34 @@
 	} // ul
 
 	li {
-		@include padding(rem(12));
+		@include padding(rem(5) rem(12));
 
 		list-style: none;
 		position: relative;
+		width: 100%;
 	} // li
 
 	a {
 		color: $color-mobile-menu-link;
+		display: block;
 		font-size: rem(14);
+		text-decoration: none;
+		width: 100%;
 
 		&:focus {
-			outline: 2px solid $color-mobile-menu-link;
+			outline: none;
 		} // &:focus
+
+		&:visited {
+			color: $color-mobile-menu-link;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			border-bottom: rem(1) solid $color-robins-egg;
+			color: $color-mobile-menu-link-hover;
+		} // &:hover, &:focus, &:active
 	} // a
 
 	// Submenu dropdowns.

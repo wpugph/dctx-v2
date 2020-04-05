@@ -164,7 +164,7 @@ function dctx_widgets_init() {
 
 	// Define sidebars.
 	$sidebars = array(
-		'sidebar-1' => esc_html__( 'Sidebar 1', 'dctx' ),
+		'footer-bar' => esc_html__( 'Footer Bar', 'dctx' ),
 	);
 
 	// Loop through each sidebar and register.

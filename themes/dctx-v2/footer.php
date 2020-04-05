@@ -13,6 +13,8 @@
 
 	<footer class="site-footer background-gallery">
 
+		<?php get_sidebar(); ?>
+
 		<nav id="footer-navigation" class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Navigation', 'dctx' ); ?>">
 			<?php
 			wp_nav_menu(

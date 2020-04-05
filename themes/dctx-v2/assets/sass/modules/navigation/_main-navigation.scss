@@ -28,7 +28,7 @@
 		}
 
 		li {
-			@include margin(0 rem(13) 0 0);
+			@include margin(0 rem(26) 0 0);
 
 			display: inline-block;
 
@@ -66,6 +66,7 @@
 
 		// Sub-menu items
 		li {
+			text-align: center;
 			width: 100%;
 
 			&:hover > ul,
