@@ -39,4 +39,31 @@
 			} // .wp-block-media-text__content
 		}
 	} // .hero
+
+	.projects {
+		@include margin(rem(120) null rem(60));
+
+		.wp-block-columns {
+			@include margin(rem(60) null);
+
+			.wp-block-column:not(:first-child) {
+				margin-left: 0;
+			} // .wp-block-column:not(:first-child)
+
+			.wp-block-cover__inner-container {
+
+				@include media($tablet-portrait) {
+
+					p {
+						@include padding(null rem(60));
+
+						font-size: rem(26);
+					} // p
+
+				}
+
+			} // .wp-block-cover__inner-container
+		} // .wp-block-columns
+
+	} // .projects
 } // .home
