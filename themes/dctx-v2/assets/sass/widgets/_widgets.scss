@@ -61,3 +61,30 @@
 		} // .gallery-item
 	} // .gallery
 } // .widget-media-gallery
+
+// Media image
+.widget_media_image {
+	display: flex;
+	justify-content: center;
+
+	.wp-caption {
+		margin-bottom: 0;
+		min-width: rem(400);
+	} //
+
+	.dctx-footer-logo {
+		height: auto;
+		width: rem(136);
+
+		+ .wp-caption-text {
+			border: none;
+			color: $color-black;
+			font-size: rem(16);
+			font-weight: 600;
+			margin-bottom: 0;
+			padding-bottom: 0;
+			text-align: center;
+			text-transform: uppercase;
+		} // .wp-caption-text
+	} // .dctx-footer-logo
+} // .widget_media_image
