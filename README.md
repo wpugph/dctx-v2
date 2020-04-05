@@ -14,7 +14,7 @@ _Local SSL is required!_
 
 ### Prerequisites
 - Install [Local by Flywheel](https://localwp.com/) for local development.
-- Download and Install [Compoer](https://getcomposer.org/download/)
+- Download and Install [Composer](https://getcomposer.org/download/)
 - Because theme is bundled with Gulp, basic knowledge of the command line and the following dependencies are required: either [Yarn](https://yarnpkg.com) or [Node](https://nodejs.org) (recommended version `10.x`), [Gulp CLI](https://github.com/gulpjs/gulp-cli) (`npm install -g gulp-cli`), and [Bower](https://bower.io/) (`npm install -g bower`).
 
 ### Development
