@@ -121,11 +121,17 @@
 
 					img {
 						max-width: rem(700);
-						object-fit: contain;
-						object-position: bottom;
 					} // img
 				} // figure
 			}
+
+			@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+
+				figure {
+					@include margin(null rem(-200) null 0);
+				} // figure
+
+			} // for iPad Pro landscape mode.
 
 		} // .image-wrapper
 
@@ -175,7 +181,7 @@
 					img {
 						max-width: rem(60);
 
-						@include media($tablet-landscape) {
+						@include media($tablet-portrait) {
 							max-width: rem(109);
 						}
 
