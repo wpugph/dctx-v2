@@ -4,12 +4,77 @@
 
 .home {
 
-	@include media($tablet-portrait) {
-		p {
+	p {
+
+		@include media($tablet-portrait) {
 			font-size: rem(26);
 			line-height: rem(38);
+		}
+
+		&.small {
+			color: $color-gray-alt;
+			font-size: rem(14);
+
+			@include media($tablet-landscape) {
+				font-size: rem(22);
+			}
+		} // &.small
+	} // p
+
+	.icon-wrapper {
+		@include margin(0 auto);
+
+		@include media($desktop) {
+			@include margin(rem(40) null);
+		}
+
+		.wp-block-column {
+			flex-basis: 0 !important; // override default.
+			flex-grow: 1;
+
+			img {
+				max-width: rem(60);
+
+				@include media($tablet-portrait) {
+					max-width: rem(109);
+				}
+
+			} // img
+
+		} // .wp-block-column
+
+
+		p {
+			font-size: rem(14);
+
+			@include media($tablet-landscape) {
+				font-size: rem(22);
+				line-height: rem(31);
+			}
 		} // p
-	}
+	} // .icon-wrapper
+
+	.wp-block-buttons {
+		@include margin(rem(15) null);
+
+		.wp-block-button {
+
+			a {
+				@include padding(rem(10) rem(50));
+
+				border-radius: rem(8);
+				text-decoration: none;
+			}
+		} // .wp-block-button
+
+		@include media(null, $tablet-landscape - 1) {
+			@include margin(rem(5) null);
+
+			display: flex;
+			justify-content: center;
+		}
+
+	} // .wp-block-buttons
 
 	.hero {
 
@@ -68,7 +133,7 @@
 			}
 
 			@include media($tablet-landscape) {
-				@include padding(rem(60) null);
+				@include padding(rem(60) null 0);
 
 				.wp-block-cover__inner-container {
 
@@ -79,61 +144,10 @@
 				} // .wp-block-cover__inner-container
 			}
 
-
 		} // .wp-block-columns
 	} // .projects
 
-	.rapidpass {
-
-		.image-wrapper {
-			@include position(absolute, null null 0 -15%);
-
-			height: 100%;
-			opacity: 0.2;
-			z-index: -1;
-
-			.wp-block-image {
-				height: 100%;
-
-				figure {
-					height: 100%;
-
-					img {
-						height: 100%;
-						max-width: none;
-						object-fit: contain;
-						object-position: bottom;
-						width: 100%;
-					} // img
-
-				} // figure
-
-			} // .wp-block-image
-
-			@include media($desktop) {
-
-				left: 0;
-				opacity: 1;
-				position: relative;
-
-				figure {
-					@include margin(null rem(-100) null rem(225));
-
-					img {
-						max-width: rem(700);
-					} // img
-				} // figure
-			}
-
-			@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-
-				figure {
-					@include margin(null rem(-200) null 0);
-				} // figure
-
-			} // for iPad Pro landscape mode.
-
-		} // .image-wrapper
+	.wp-block-cover {
 
 		.content-wrapper {
 			@include padding($space $space rem(20));
@@ -146,78 +160,73 @@
 				&.wp-block-column {
 					flex-basis: auto !important;
 				} // &.wp-block-column
+
+				.wp-block-image {
+					display: flex;
+					justify-content: center;
+				} // .wp-block-image
 			}
 
 			@include media($desktop) {
-				@include padding(null 0);
+				@include margin(0 0 0 45%);
+				@include padding(rem(100) 0);
 
-				max-width: rem(790);
+				max-width: rem(800);
 				text-align: left;
 			}
 
-			p {
-
-				&.small {
-					color: $color-gray-alt;
-					font-size: rem(14);
-
-					@include media($tablet-landscape) {
-						font-size: rem(22);
-					}
-				} // &.small
-			} // p
-
-			.icon-wrapper {
-				@include margin(0 auto);
-
-				@include media($desktop) {
-					@include margin(rem(40) null null);
-				}
-
-				.wp-block-column {
-					flex-basis: 0 !important; // override default.
-					flex-grow: 1;
-
-					img {
-						max-width: rem(60);
-
-						@include media($tablet-portrait) {
-							max-width: rem(109);
-						}
-
-					} // img
-
-				} // .wp-block-column
-
-
-				p {
-					@include padding(null null rem(10));
-
-					font-size: rem(14);
-
-					@include media($tablet-landscape) {
-						@include padding(null rem(30) 0);
-
-						font-size: rem(22);
-						line-height: rem(31);
-					}
-				} // p
-			} // .icon-wrapper
-
-			.wp-block-buttons {
-				@include margin(rem(15) null);
-
-				@include media(null, $tablet-landscape - 1) {
-					@include margin(rem(5) null);
-
-					display: flex;
-					justify-content: center;
-				}
-
-			} // .wp-block-buttons
+			@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+				@include margin(0 0 0 45%);
+				@include padding(rem(10) 0);
+			} // iPad Pro Landscape.
 
 		} // .content-wrapper
 
-	} // .rapidpass
+		&.rapidpass {
+			background-position: 100px bottom;
+			background-size: contain;
+
+			@include media($desktop) {
+
+				&::before {
+					opacity: 0 !important;
+				} // &::before
+			}
+
+			@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+
+				background-position: left bottom;
+
+			} // iPad Pro Landscape.
+
+		} // &.rapidpass
+
+		&.tracecovid {
+			background-position: right bottom;
+			background-size: contain;
+
+			@include media($desktop) {
+
+				&::before {
+					opacity: 0 !important;
+				} // &::before
+			}
+
+			.content-wrapper {
+
+				@include media($desktop) {
+					margin-left: 10%;
+				}
+
+				@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+					@include margin(0);
+					@include padding(rem(100) 0);
+				} // iPad Pro Landscape.
+
+			} // .content-wrapper
+
+		} // &.tracecovid
+
+	} // .wp-block-cover
 
 } // .home
