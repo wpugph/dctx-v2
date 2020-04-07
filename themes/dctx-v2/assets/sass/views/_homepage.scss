@@ -194,12 +194,12 @@
 			background-position: 100px bottom;
 			background-size: cover;
 
-			@include media($desktop) {
+			@include media($tablet-portrait) {
 				background-size: contain;
+			}
 
-				&::before {
-					opacity: 0 !important;
-				} // &::before
+			@include media($tablet-landscape) {
+				background-position: rem(-300) bottom;
 			}
 
 			@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
@@ -207,6 +207,35 @@
 				background-position: left bottom;
 
 			} // iPad Pro Landscape.
+
+			@include media($desktop) {
+
+				&::before {
+					opacity: 0 !important;
+				} // &::before
+			}
+
+			@include media($desktop-large) {
+				background-position: 10% bottom;
+			}
+
+			.content-wrapper {
+
+				@include media($desktop-large) {
+					margin-left: rem(850);
+				}
+
+				@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+					@include margin(0 0 0 rem(750));
+					@include padding(rem(100) 0);
+				} // iPad Pro Landscape.
+
+				@include media($tablet-landscape) {
+					margin-left: rem(400);
+					padding-left: 0;
+				}
+
+			} // .content-wrapper
 
 		} // &.rapidpass
 
@@ -229,7 +258,7 @@
 				}
 
 				@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-					@include margin(0);
+					@include margin(0 0 0 );
 					@include padding(rem(100) 0);
 				} // iPad Pro Landscape.
 
