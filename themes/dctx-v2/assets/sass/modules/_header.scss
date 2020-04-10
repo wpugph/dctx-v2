@@ -20,6 +20,12 @@
 		align-items: center;
 		display: flex;
 		flex-flow: row wrap;
+
+		@include media($desktop) {
+			@include padding(null 10%);
+
+			max-width: 100%;
+		}
 	} // .header-wrapper
 
 	// Site logo.
@@ -42,6 +48,10 @@
 		img {
 			@include media($tablet-portrait, $tablet-landscape) {
 				width: 50%;
+			}
+
+			@include media($tablet-landscape) {
+				min-height: rem(103);
 			}
 		} // img
 	} // .site-branding
@@ -132,7 +142,6 @@
 	// Site header Action Searchform.
 	//-----------------------------------------
 	.site-header-action {
-
 		.form-container {
 			max-height: 0;
 			overflow: hidden;
