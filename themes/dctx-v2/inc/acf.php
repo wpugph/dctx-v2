@@ -351,7 +351,7 @@ function dctx_get_theme_colors() {
 		esc_html__( 'Gigas', 'dctx' )           => '#5641a5',
 		esc_html__( 'Robins Egg', 'dctx' )      => '#00bcd4',
 		esc_html__( 'Desert Storm', 'dctx' )    => '#f1f2f0',
-		esc_html__( 'Alabaster', 'dctx' )    => '#fafafa',
+		esc_html__( 'Alabaster', 'dctx' )       => '#fafafa',
 		esc_html__( 'Alto', 'dctx' )            => '#ddd',
 		esc_html__( 'Black', 'dctx' )           => '#000',
 		esc_html__( 'Blue', 'dctx' )            => '#21759b',

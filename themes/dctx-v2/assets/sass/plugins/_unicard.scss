@@ -7,6 +7,7 @@
 	box-shadow: 0 rem(4) rem(30) rgba($color-black, 0.15);
 	flex: 1;
 	margin-bottom: $gutter * 2;
+	max-width: rem(500);
 	overflow: hidden;
 	padding: 0;
 
@@ -16,7 +17,7 @@
 	} // img
 
 	.card-content {
-		@include padding(null rem(30));
+		@include padding(rem(10) rem(30));
 
 		@include media($tablet-landscape) {
 			@include padding(null rem(50));
@@ -27,7 +28,8 @@
 			h3 {
 				color: $color-black;
 				font-size: rem(22);
-				line-height: rem(36);
+				line-height: rem(30);
+				margin-bottom: 0;
 
 				@include media($tablet-portrait) {
 					font-size: rem(40);
@@ -38,8 +40,11 @@
 		} // .card-title
 
 		.card-description {
+			@include margin(0 null rem(30));
 
 			p {
+				@include margin(0 null);
+
 				color: $color-black;
 				font-size: rem(14);
 				line-height: rem(20);
