@@ -2,7 +2,12 @@
 // Card
 //--------------------------------------------------------------
 .card {
+	background: $color-alabaster;
+	border-radius: rem(39);
+	box-shadow: 0 rem(4) rem(30) rgba($color-black, 0.15);
+	flex: 1;
 	margin-bottom: $gutter * 2;
+	overflow: hidden;
 	padding: 0;
 	text-align: center;
 
@@ -14,4 +19,47 @@
 	img {
 		width: 100%;
 	} // img
+
+	.card-title {
+		@include padding(rem(30) rem(30) null);
+
+		h3 {
+			color: $color-black;
+			font-size: rem(22);
+			line-height: rem(36);
+
+			@include media($tablet-portrait) {
+				font-size: rem(40);
+				font-weight: 600;
+				line-height: rem(46);
+			}
+		} // h3
+	} // .card-title
+
+	.card-description {
+		@include padding(null rem(30));
+
+		p {
+			color: $color-black;
+			font-size: rem(14);
+			line-height: rem(20);
+
+			@include media($tablet-portrait) {
+				font-size: rem(22);
+				line-height: rem(36);
+			}
+		}
+	} // .card-description
+
+	.card-image {
+		background-color: $color-gigas;
+		max-height: 45%;
+
+		.featured-image {
+			@include padding(rem(20));
+			@include size(100%);
+
+			object-fit: contain;
+		} // .featured-image
+	} // .card-image
 } // .card

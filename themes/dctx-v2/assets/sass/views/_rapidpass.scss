@@ -1,0 +1,277 @@
+//--------------------------------------------------------------
+// RapidPass
+//--------------------------------------------------------------
+
+.page-template-template-rapidpass {
+
+	h2 {
+		@include media($tablet-portrait) {
+			font-size: rem(50);
+		}
+	} // h3
+
+	h3 {
+		margin-bottom: rem(30);
+
+		@include media($tablet-portrait) {
+			font-size: rem(40);
+		}
+	} // h3
+
+	p {
+		@include margin(rem(30) null);
+
+		@include media($tablet-portrait) {
+			font-size: rem(28);
+			line-height: rem(38);
+		}
+
+		&.small {
+			color: $color-gray-alt;
+			font-size: rem(14);
+
+			@include media($tablet-landscape) {
+				font-size: rem(22);
+			}
+		} // &.small
+	} // p
+
+	.icon-wrapper {
+		@include margin(rem(20) auto);
+
+		@include media($desktop) {
+			@include margin(rem(40) null);
+		}
+
+		.wp-block-column {
+			@include margin(rem(20) auto 0);
+
+			img {
+				height: auto;
+				max-width: rem(100);
+
+				@include media($tablet-portrait) {
+					height: rem(100);
+					width: auto;
+				}
+
+				@include media($tablet-landscape) {
+					height: auto;
+					max-width: rem(150);
+				}
+			} // img
+		} // .wp-block-column
+
+		p {
+			font-size: rem(14);
+			line-height: rem(20);
+
+			@include media($tablet-landscape) {
+				font-size: rem(22);
+				line-height: rem(31);
+			}
+		} // p
+	} // .icon-wrapper
+
+	.wp-block-buttons {
+		@include margin(rem(15) null);
+
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		@include media($tablet-portrait) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		.wp-block-button {
+			width: 80%;
+
+			@include media($tablet-portrait) {
+				width: 46%;
+			}
+
+			a {
+				@include padding(rem(5) rem(30));
+
+				border-radius: rem(44);
+				min-width: rem(200);
+				text-decoration: none;
+				transition: $transition-color;
+				width: 100%;
+
+				@include media($tablet-portrait) {
+					font-size: rem(31);
+				}
+
+				&:hover,
+				&:focus,
+				&:active {
+					background-color: $color-gigas;
+					color: $color-white;
+					opacity: 1;
+				} // &:hover, &:focus, &:active
+			} // a
+
+			&.is-style-fill {
+				a {
+					border: rem(2) solid;
+
+					&:hover,
+					&:focus,
+					&:active {
+						background-color: transparent;
+						color: $color-gigas;
+					} // &:hover, &:focus, &:active
+				} // a
+			} // &.is-style-fill
+		} // .wp-block-button
+
+		@include media(null, $tablet-landscape - 1) {
+			@include margin(rem(5) null);
+
+			display: flex;
+			justify-content: center;
+		}
+	} // .wp-block-buttons
+
+	.wp-block-cover {
+		.content-wrapper {
+			@include padding(rem(50) $space);
+
+			text-align: center;
+
+			@include media(null, $desktop) {
+				margin-left: 0 !important;
+
+				&.wp-block-column {
+					flex-basis: auto !important;
+				} // &.wp-block-column
+
+				.wp-block-image {
+					@include margin(0 auto rem(20));
+
+					img {
+						height: auto;
+					}
+				} // .wp-block-image
+			}
+
+			@include media($desktop) {
+				@include margin(0 0 0 45%);
+				@include padding(rem(100) 0);
+
+				max-width: rem(800);
+				text-align: left;
+			}
+
+			@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+				@include margin(0 0 0 45%);
+				@include padding(rem(10) 0);
+			} // iPad Pro Landscape.
+		} // .content-wrapper
+
+		&.rapidpass-hero {
+			background-position: 100px top;
+			background-size: cover;
+
+			@include media($tablet-portrait) {
+				background-size: contain;
+			}
+
+			@include media($tablet-landscape) {
+				background-position: rem(-300) top;
+				background-size: rem(800) auto;
+				margin-bottom: rem(-110);
+			}
+
+			@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+				background-position: left top;
+			} // iPad Pro Landscape.
+
+			@include media($desktop) {
+				&::before {
+					opacity: 0 !important;
+				} // &::before
+			}
+
+			@include media($desktop-large) {
+				background-position: 15% top;
+			}
+
+			.content-wrapper {
+				@include media($desktop-large) {
+					margin-left: rem(850);
+				}
+
+				@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+					@include margin(0 0 0 rem(750));
+					@include padding(rem(100) 0);
+				} // iPad Pro Landscape.
+
+				@include media($tablet-landscape) {
+					margin-left: rem(400);
+					padding-left: 0;
+				}
+			} // .content-wrapper
+		} // &.rapidpass-pass
+
+		&.fast-forward {
+			background-color: transparent;
+			background-position: top center;
+			background-size: cover;
+			color: $color-gigas;
+			padding-top: rem(80);
+
+			@include media($tablet-landscape) {
+				padding-top: rem(140);
+			}
+
+			.content-wrapper {
+				@include margin(null auto);
+
+				@include media($desktop) {
+					max-width: 80%;
+				}
+
+				h1 {
+					font-size: rem(40);
+					font-weight: 600;
+					line-height: rem(50);
+
+					@include media($tablet-landscape) {
+						@include padding(null rem(50));
+
+						font-size: rem(50);
+						font-weight: 600;
+						line-height: rem(70);
+					}
+				} // h1
+
+				.card-block {
+					@include margin(rem(30) auto);
+
+					@include media($tablet-landscape) {
+						@include margin(rem(60) auto);
+
+						.card {
+							@include size(rem(660), rem(700));
+
+							.card-title {
+
+								h3 {
+									color: $color-tango;
+								} // h3
+							} // .card-title
+						} // .card
+					}
+
+				} // .card-block
+			} // .content-wrapper
+		}// &.fast-forward
+
+	} // .wp-block-cover
+
+} // .page-template-template-rapidpass

@@ -618,6 +618,10 @@ msgstr ""
 msgid "Share on LinkedIn"
 msgstr ""
 
+#: template-rapidpass.php:3
+msgid "RapidPass"
+msgstr ""
+
 #: template-scaffolding.php:3
 msgid "Scaffolding"
 msgstr ""
