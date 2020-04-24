@@ -13,7 +13,11 @@
 			z-index: 1;
 
 			.content-wrapper {
-				@include padding(rem(150) null null);
+				@include padding(rem(50) null null);
+
+				@include media($tablet-landscape) {
+					@include padding(rem(150) null null);
+				}
 
 				.wp-block-media-text {
 					position: relative;
@@ -158,9 +162,17 @@
 							&:first-of-type {
 								flex-basis: 33.33% !important;
 							}
-
 						}
 					} // .wp-block-column
+					@include media(null, $tablet-portrait) {
+						.wp-block-image {
+
+							img {
+								max-height: rem(300);
+							} // img
+						} // .wp-block-image
+					}
+
 				} // .content-columns
 			} // .content-wrapper
 
