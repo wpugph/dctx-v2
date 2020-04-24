@@ -22,20 +22,34 @@
 .wp-block-buttons {
 	@include margin(rem(15) null);
 
+	flex-direction: column;
+
+	@include media($phone-landscape) {
+		flex-direction: row;
+	}
+
 	.wp-block-button {
 		a {
 			@include padding(rem(10) rem(30));
 
-			border: rem(2) solid;
-			border-radius: rem(8);
+			border: rem(2) solid $color-gigas;
+			border-radius: rem(44);
 			min-width: rem(200);
 			text-decoration: none;
 			transition: $transition-color;
+
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: $color-gigas;
+				color: $color-white;
+				opacity: 1;
+			} // &:hover, &:focus, &:active
 		} // a
 
 		&.is-style-fill {
 			a {
-				border: rem(2) solid;
+				border: rem(2) solid $color-gigas;
 
 				&:hover,
 				&:focus,
