@@ -5,9 +5,9 @@ Repository for the DCTx project.
 ## Project Details
 
 - Final Site URL - https://dctx.ph/
-- [Staging](http://jc-dctx1.pantheonsite.io/)
+- [Staging](https://jcnew-dctx1.pantheonsite.io/)
 - [Figma](https://www.figma.com/file/ZP2wEI8IdAEWVr3pPFL8fW/DCTx-Landing-Page-04012020?node-id=0%3A1)
-- [Local Export](https://drive.google.com/file/d/1mn0vhDQBr3Vyx3Tw-oB8GVuTW8Uc14ti/view?usp=sharing)
+- [Local Export](https://drive.google.com/open?id=1oAF1XCvdLwLGzvSCTDuVb9rCYMAiYqlu) - Choose the most recent export.
 
 _Local SSL is required!_
 
